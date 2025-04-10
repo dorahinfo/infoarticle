@@ -98,3 +98,55 @@ body, html {
   display: block;
   font-size: 0.9em;
 }
+/* Centrer les cartes */
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style des cartes des membres */
+.card {
+  background-color: rgba(255, 255, 255, 0.8); /* blanc semi-transparent */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  width: 250px; /* plus grand pour mobile */
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Image des membres */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Texte à l'intérieur */
+.card h2, .card h3, .card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Responsive : plus gros texte sur mobile */
+@media (max-width: 600px) {
+  .card {
+    width: 90%; /* occupe presque tout l'écran */
+  }
+
+  .card h2, .card h3, .card p {
+    font-size: 1.1rem;
+  }
+
+  .members {
+    gap: 15px;
+  }
+}
