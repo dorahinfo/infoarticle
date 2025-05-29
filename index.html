@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Club Starex Mada 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+function showMember(card) {
+  const viewer = document.getElementById('viewer');
+  const imgSrc = card.querySelector('img').src;
+  const name = card.querySelector('h2:nth-child(1)').textContent;
+  const title = card.querySelector('h2:nth-child(2)')?.textContent || '';
+  const ps = card.querySelectorAll('p');
+
+  let otherInfo = '';
+  ps.forEach(p => {
+    otherInfo += `<p>${p.textContent}</p>`;
+  });
+
+  viewer.innerHTML = `
+    <img src="${imgSrc}" alt="${name}" style="max-width:150px;border-radius:10px;"><br>
+    <h2>${name}</h2>
+    <h3>${title}</h3>
+    ${otherInfo}
+  `;
+
+  // Faire défiler la page vers le haut
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+  <div class="background" id="background"></div>
+
+  <div class="overlay">
+    <header class="header">
+      <h1>LES MEMBRES OFFICIELS DU CLUB STAREX MADA 🇲🇬 2025</h1>
+	  <input type="text" id="searchInput" placeholder="🔍 Rechercher un membre..." oninput="filterMembers()" style="margin-top: 10px; padding: 10px; width: 90%; max-width: 500px; font-size: 16px; border-radius: 10px; border: none; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+
+
+
+    </header>
+
+    <section class="viewer" id="viewer">
+      <p>Clique sur un membre pour voir ses infos ici.</p>
+    </section>
+
+    <section class="scroll-list">
+      <div class="members">
+        <!-- ... les cartes des membres ici, inchangées ... -->
+        <h1>LA LISTE DES MEMBRES OFFICIEL DU CLUB STAREX MADA 2025</h1>
+
+        <!-- Membres -->
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/84ndxwg4/president.jpeg" alt="Ling seng chan">
+          <div class="info">
+            <h2>Président Club Starex Mada
+            Nonoh Nalison</h2>
+            <!-- <p>Grand starex</p> -->
+            <p>9485 TBU</p>
+            <p class="phone">033 14 909 27</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/FbCwCRsW/Nalison-Ny-Aina-Tiavina.jpg" alt="Ling seng chan">
+          <div class="info">
+            <h2>Nalison Ny Aina Tiavina</h2>
+            <p>Fb tia voyages Madagascar</p>
+            <h3>Staff CSM</h3>
+            <p>0658 TBA</p>
+            <p>2970 TBK</p>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/jZrVLsPw/WhatsApp-Image-2025-04-08-at-14-48-33.jpeg" alt="Nom">
+          <div class="info">
+            <h2>Razadindrakoto Mika Harinjaka</h2>
+            <p>0504 TBH</p>
+            <p>Fb dadan'mikanto sy miangaly</p>
+            <h3>Staff CSM</h3>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/bRQWTkSz/Noël-Christian-Rakotonirina.jpeg" alt="Nom">
+          <div class="info">
+            <h2>Noël Christian Rakotonirina</h2>
+            <p>Fb noël starex</p>
+            <p>8824 TBH</p>
+            <h3>Staff CSM</h3>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/Df376P2D/ZAVARALY-Rico-Richard.jpeg" alt="Nom">
+          <div class="info">
+            <h2>ZAVARALY Rico Richard</h2>
+            <p>1049 TBH</p>
+            <p>Fb zavaraly rico richard</p>
+            <h3>Staff CSM</h3>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/RLN2X5n/Rakotonirina-Andry-Niaina.jpeg" alt="Nom">
+          <div class="info">
+            <h2>Rakotonirina Andry Niaina</h2>
+            <p>3735TBH</p>
+            <p>Fb andriniaina Rakotonirina</p>
+            <h3>Staff CSM</h3>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/7NKmcbYj/Harytiana-Rakotomalala.jpeg" alt="Nom">
+          <div class="info">
+            <h2>Harytiana Rakotomalala</h2>
+            <p>7754 TBE</p>
+            <p>Fb harytiana Rakotomalala</p>
+            <h3>Staff CSM</h3>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/RGKV9BLt/Rakotonirina-Gaston.jpeg" alt="Nom">
+          <div class="info">
+            <h2>Rakotonirina Gaston</h2>
+            <p>004 402</p>
+            <p>Fb filston Gasmir</p>
+            <h3>Staff CSM</h3>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/MybhY6Kz/RANDRIANARIVELO-Robison-Eric.jpeg" alt="Nom">
+          <div class="info">
+            <h2>RANDRIANARIVELO Robison Eric</h2>
+            <p>559 637</p>
+            <p>Fb robison Eric</p>
+            <h3>Staff CSM</h3>
+            <p>Grx</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/HDZ2V5G0/tolotra.jpg" alt="Nom">
+          <div class="info">
+            <h2>Tolotra Randriamiraho</h2>
+            <p>1371TBP</p>
+            <p>Fb Tolotra Randriamiraho</p>
+            <h3>Membre CSM</h3>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/RpJ4tydb/bryan.jpeg" alt="Nom">
+          <div class="info">
+            <h2>Bryan Rakoto</h2>
+            <h3>Membre CSM</h3>
+            <p>Fb Bryan Rakoto</p>
+            <p>07 20 81 CVX</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/mVpnXnqb/tolotra(2).jpg" alt="Nom">
+          <div class="info">
+            <h2>Tolotra Arvel</h2>
+            <h3>Membre CSM</h3>
+            <p>Tolotra Arvel</p>
+            <p>7854 TBH</p>
+            <p>GRX</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/rRv70Hpt/saholy.jpg" alt="Nom">
+          <div class="info">
+            <h2>Saholy Ramasimanana</h2>
+            <h3>Membre CSM</h3>
+            <p>Fb saholy rasamimanana</p>
+            <p>7438. TBK</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/vC1B1SDP/aina.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAVELOJAONA Aina iarantsoa</h2>
+            <h3>Membre CSM</h3>
+            <p>ravelojaona Aina</p>
+            <p>6464TBH</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/vxvn50ct/idn.jpg" alt="Nom">
+          <div class="info">
+            <h2>Jean rickel mac</h2>
+            <h3>Membre CSM</h3>
+            <p>fb: 58è visiteurs</p>
+            <p>18 99 TBN</p>
+            <p>GRX</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/hx35TXbt/rajao.jpg" alt="Nom">
+          <div class="info">
+            <h2>Rajaonarison Herinantnaina</h2>
+            <h3>Membre CSM</h3>
+            <p>8767 TCB</p>
+            <p>GRX</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="showMember(this)">
+          <img src="https://i.ibb.co/vxXbrpg9/seng.jpg" alt="Nom">
+          <div class="info">
+            <h2>Ling seng chan</h2>
+            <h3>Membre CSM</h3>
+            <p>Luigi Earvin</p>
+            <p>0658 TBA</p>
+          </div>
+        </div>
+		
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/CxsnCJF4/1.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAHARILANTO Tanjona </h2>
+            <h3>Membre CSM</h3>
+			  <p>Fb Tanjona RAHARILANTO</p>
+            <p>8649 TBM</p>
+            <p>GRX</p>
+          </div>
+       </div>       
+   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/fydJVf2m/2.jpg" alt="Nom">
+          <div class="info">
+            <h2>RANDRIANIRINASOA Sitràka Fiderana</h2>
+            <h3>Membre CSM</h3>
+			<p>Fb Sitràka lima</p>
+            <p>7967 TBN</p>
+            
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/TPkyFw5L/33.jpg" alt="Nom">
+          <div class="info">
+            <h2>Faniriantsoa Jean Frédéric</h2>
+            <h3>Membre CSM</h3>
+            <p>Fb Jean Frédéric faniriantsoa</p>
+			<p>0193 TBS</p>
+            <p>Svx</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/DZ8WTT1C/44.jpg" alt="Nom">
+          <div class="info">
+            <h2>RABEARIVELO Eric</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb erictiana Rabearivelo</p>
+            <p>3706 TBJ</p>
+            <p>Grand starex</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/BvZLmDbf/55.jpg" alt="Nom">
+          <div class="info">
+            <h2>RABENAIVO Jean Frédéric</h2>
+            <h3>Membre CSM</h3>
+			  <p>Fb Fred miller</p>
+            <p>6566 TBM</p>
+            <p>GRX</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/qv4z7n86/66.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAHARIVOLASOA Noro Josiane</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb fafah volasoa</p>
+            <p>5994 TBL</p>
+            <p>GRX</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/d1phQxBJ/77.jpg" alt="Nom">
+          <div class="info">
+            <h2>Mihasy Razakosolosoa</h2>
+            <h3>Membre CSM</h3>
+			    <p>Fb mihasy rzk</p>
+            <p>7179 AJ</p>
+            <p>GRX</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/7PJCtqHh/88.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAKOTONIRINA Martial Edmond</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb Edmond Rakotonirina</p>
+            <p>8773TBC/5108 TBV</p>
+            <p>GRX</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/02pzxZJq/9.jpg" alt="Nom">
+          <div class="info">
+            <h2>RATSIMBAZAFY Nantenaina Romeo</h2>
+            <h3>Membre CSM</h3>
+		   <p>Fb naina Ratsimbazafy</p>
+            <p>7698 TBV</p>
+            <p>GRX</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/BvvbT07q/dix.jpg" alt="Nom">
+          <div class="info">
+            <h2>RANDRIANARISON Christian</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb jess Anja</p>
+            <p>3478 TBH</p>
+            <p>Svx</p>
+          </div>
+       </div>   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/vZhDxBzq/onze.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAHARISON Laza Mandimbisoa</h2>
+            <h3>Membre CSM</h3>
+            <p>Fb Laza raharison</p>
+            <p>1689 TBK</p>
+            <p>Svx</p>
+          </div>
+       </div>  
+
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/5yMJd2Xc/1.jpg" alt="Nom">
+          <div class="info">
+            <h2>ANDRIAMAHERINIRINA Santatry Ny Aina </h2>
+            <h3>Membre CSM</h3>
+			  <p>Fb Lanja Ny Aina</p>
+            <p>8622 TBM</p>
+            <p>Membre CSM</p>
+          </div>
+       </div>       
+   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/rp3cjJcw/2.jpg" alt="Nom">
+          <div class="info">
+            <h2>ANDRIANARIMANANA Maminiaina Eric</h2>
+            <h3>Membre CSM</h3>
+			<p>Fb Andria Eric</p>
+            <p>8976 TBS (GS)</p>
+            
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/zvmzzkPc/3.jpg" alt="Nom">
+          <div class="info">
+            <h2>Fitiavana Barège </h2>
+            <h3>Membre CSM</h3>
+            <p>Fb Fitia Barège Jr</p>
+			<p>3749 WWT</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/L6K52mc8/4.jpg" alt="Nom">
+          <div class="info">
+            <h2>RKOTONIAINA JANNY</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb ad jah</p>
+            <p>..........</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/tTsJCJRY/5.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAKOTONDRANAIVO Jean Pierre</h2>
+            <h3>Membre CSM</h3>
+			  <p>Fb jean pierre rakotondranaivo</p>
+            <p>779-373</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/XNZBnHXQ/6.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAVELOSON John Freddy</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb mahasoa fifaliana</p>
+            <p>3250 TBM</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/tJVj8VqN/7.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAKOTONANAHARY Avotra Jean François</h2>
+            <h3>Membre CSM</h3>
+			    <p>Fb avotra rakotonanahary</p>
+            <p>6837 TBP</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/mr8B9spC/8.jpg" alt="Nom">
+          <div class="info">
+            <h2>Jule Andrianiana</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb Jule andrianiana</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/HsyYhFj1/9.jpg" alt="Nom">
+          <div class="info">
+            <h2>RYAN RAZAFIMAMONJY</h2>
+            <h3>Membre CSM</h3>
+		   <p>Fb Ryan Raza</p>
+            <p>6062 TBH</p>
+          </div>
+       </div>   
+	   
+	<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/44M4wXf1/10.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAKOTOARISON Andrianina Tovonirina</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb andrianina tovonirina </p>
+            <p>1225 TBM</p>
+            <p>Grx</p>
+          </div>
+       </div>   
+		<div class="card" onclick="showMember(this)">
+          <img src="https://i.postimg.cc/wvwM9JdK/11.jpg" alt="Nom">
+          <div class="info">
+            <h2>RAMIADAMAHEFA Hervé Landry</h2>
+            <h3>Membre CSM</h3>
+			 <p>Fb Hervé Landry </p>
+            <p>8753 TAN</p>
+      
+          </div>
+       </div>  
+	   
+      </div>
+    </section>
+  </div>
+
+<script>
+// ===============================
+// 🔍 FONCTION DE RECHERCHE
+// ===============================
+function filterMembers() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(input) ? "block" : "none";
+  });
+}
+
+// ===============================
+// 🌄 FOND DYNAMIQUE AVEC 10 IMAGES
+// ===============================
+const background = document.getElementById("background");
+const images = [
+  "https://i.postimg.cc/5NC3qSqm/1.jpg",
+  "https://i.postimg.cc/vZwvPx0w/2.jpg",
+  "https://i.postimg.cc/t4dN8RcZ/3.jpg",
+  "https://i.postimg.cc/TPRJxM8k/4.jpg",
+  "https://i.postimg.cc/zf0SXt8q/5.jpg",
+  "https://i.postimg.cc/26ydqQSh/6.jpg",
+  "https://i.postimg.cc/GmR54fwD/7.jpg",
+  "https://i.postimg.cc/sXLY5MM8/8.jpg",
+  "https://i.postimg.cc/MK7sJYMp/9.jpg",
+  "https://i.postimg.cc/y8TrcTsb/10.jpg"
+];
+
+let current = 0;
+
+function changeBackground() {
+  background.style.backgroundImage = `url('${images[current]}')`;
+  background.style.backgroundSize = "cover";
+  background.style.backgroundPosition = "center";
+  current = (current + 1) % images.length;
+}
+
+setInterval(changeBackground, 2000);
+changeBackground(); // Affiche l’image initiale
+</script>
+
+
+</body>
+</html>
